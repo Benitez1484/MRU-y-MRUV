@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRUV - Física en Movimiento</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/img/Logo de la mariano.png" alt="Logo" class="logo">
+        <h1>FISICA EN MOVIMIENTO: MRU y MRUV</h1>
+        <nav>
+            <a href="/index.html" class="nav-button">Inicio</a>
+            <a href="/pages/MRU.html" class="nav-button">MRU</a>
+            <a href="/pages/MRUV.html" class="nav-button active">MRUV</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mruv-section">
+            <h2>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h2>
+            <p>El Movimiento Rectilíneo Uniformemente Variado (MRUV) es un tipo de movimiento en el que un objeto se desplaza en línea recta con aceleración constante. Esto significa que la velocidad del objeto cambia de manera uniforme con el tiempo.</p>
+            <h3>Características del MRUV:</h3>
+            <ul>
+                <li>Trayectoria rectilínea</li>
+                <li>Aceleración constante</li>
+                <li>Velocidad variable (aumenta o disminuye uniformemente)</li>
+                <li>La distancia recorrida no es proporcional al tiempo</li>
+            </ul>
+            <div class="calculator-grid">
+                <div class="calculator">
+                    <h3>Aceleración</h3>
+                    <img src="/img/aceleracion.png" alt="Aceleración MRUV" class="concept-image">
+                    <p>La aceleración en MRUV es constante y se calcula como la variación de la velocidad en el tiempo.</p>
+                    <p>a = (vf - vi) / t</p>
+                    <input type="number" id="mruv-vi" placeholder="Velocidad Inicial (m/s)">
+                    <input type="number" id="mruv-vf" placeholder="Velocidad Final (m/s)">
+                    <input type="number" id="mruv-t" placeholder="Tiempo (s)">
+                    <button onclick="calculateMRUVAcceleration()">Calcular Aceleración</button>
+                    <p id="mruv-acceleration-result" class="result"></p>
+                </div>
+                <div class="calculator">
+                    <h3>Distancia MRUV</h3>
+                    <img src="/img/Distancia.png" alt="Distancia MRUV" class="concept-image">
+                    <p>La distancia en MRUV se calcula considerando la velocidad inicial, la aceleración y el tiempo transcurrido.</p>
+                    <p>d = vi * t + (1/2) * a * t²</p>
+                    <input type="number" id="mruv-vi-dist" placeholder="Velocidad Inicial (m/s)">
+                    <input type="number" id="mruv-a-dist" placeholder="Aceleración (m/s²)">
+                    <input type="number" id="mruv-t-dist" placeholder="Tiempo (s)">
+                    <button onclick="calculateMRUVDistance()">Calcular Distancia</button>
+                    <p id="mruv-distance-result" class="result"></p>
+                </div>
+                <div class="calculator">
+                    <h3>Velocidad Final</h3>
+                    <img src="/img/Velocidad Final.png" alt="Velocidad Final MRUV" class="concept-image">
+                    <p>La velocidad final en MRUV se calcula considerando la velocidad inicial, la aceleración y el tiempo transcurrido.</p>
+                    <p>vf = vi + a * t</p>
+                    <input type="number" id="mruv-vi-vf" placeholder="Velocidad Inicial (m/s)">
+                    <input type="number" id="mruv-a-vf" placeholder="Aceleración (m/s²)">
+                    <input type="number" id="mruv-t-vf" placeholder="Tiempo (s)">
+                    <button onclick="calculateMRUVFinalVelocity()">Calcular Velocidad Final</button>
+                    <p id="mruv-final-velocity-result" class="result"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Benitez Simón - Universidad Marino Galvez de Guatemala</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

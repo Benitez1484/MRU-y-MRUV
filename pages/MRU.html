@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRU - Física en Movimiento</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/img/Logo de la mariano.png" alt="Logo" class="logo">
+        <h1>FISICA EN MOVIMIENTO: MRU y MRUV</h1>
+        <nav>
+            <a href="/index.html" class="nav-button">Inicio</a>
+            <a href="/pages/MRU.html" class="nav-button active">MRU</a>
+            <a href="/pages/MRUV.html" class="nav-button">MRUV</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mru-section">
+            <h2>Movimiento Rectilíneo Uniforme (MRU)</h2>
+            <p>El Movimiento Rectilíneo Uniforme (MRU) es un tipo de movimiento en el que un objeto se desplaza en línea recta y a velocidad constante. Esto significa que la dirección y la magnitud de la velocidad no cambian con el tiempo.</p>
+            <h3>Características del MRU:</h3>
+            <ul>
+                <li>Trayectoria rectilínea</li>
+                <li>Velocidad constante</li>
+                <li>Aceleración nula</li>
+                <li>Distancia recorrida proporcional al tiempo</li>
+            </ul>
+            <div class="calculator-grid">
+                <div class="calculator">
+                    <h3>Velocidad</h3>
+                    <img src="/img/Movimiento.png" alt="Velocidad MRU" class="concept-image">
+                    <p>La velocidad en MRU es constante y se calcula dividiendo la distancia recorrida entre el tiempo empleado.</p>
+                    <p>v = d / t</p>
+                    <input type="number" id="mru-distance" placeholder="Distancia (m)">
+                    <input type="number" id="mru-time" placeholder="Tiempo (s)">
+                    <button onclick="calculateMRUVelocity()">Calcular Velocidad</button>
+                    <p id="mru-velocity-result" class="result"></p>
+                </div>
+                <div class="calculator">
+                    <h3>Tiempo</h3>
+                    <img src="/img/Tiempo.png" alt="Tiempo MRU" class="concept-image">
+                    <p>El tiempo en MRU se calcula dividiendo la distancia recorrida entre la velocidad constante del objeto.</p>
+                    <p>t = d / v</p>
+                    <input type="number" id="mru-distance-time" placeholder="Distancia (m)">
+                    <input type="number" id="mru-velocity-time" placeholder="Velocidad (m/s)">
+                    <button onclick="calculateMRUTime()">Calcular Tiempo</button>
+                    <p id="mru-time-result" class="result"></p>
+                </div>
+                <div class="calculator">
+                    <h3>Distancia</h3>
+                    <img src="/img/Distancia m.png" alt="Distancia MRU" class="concept-image">
+                    <p>La distancia recorrida en MRU se calcula multiplicando la velocidad constante por el tiempo transcurrido.</p>
+                    <p>d = v * t</p>
+                    <input type="number" id="mru-velocity-dist" placeholder="Velocidad (m/s)">
+                    <input type="number" id="mru-time-dist" placeholder="Tiempo (s)">
+                    <button onclick="calculateMRUDistance()">Calcular Distancia</button>
+                    <p id="mru-distance-result" class="result"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Benitez Simón - Universidad Marino Galvez de Guatemala</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
